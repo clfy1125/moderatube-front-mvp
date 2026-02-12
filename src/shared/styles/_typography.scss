@@ -1,0 +1,17 @@
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable font-family-name-quotes */
+
+@use './theme' as *;
+
+@mixin fontStyle($size: 14px, $weight: 400, $color: $black, $line-height: 100%) {
+  & {
+    font-family: 'Pretendard';
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    color: $color; 
+    letter-spacing: 0;
+  }
+
+  @content;
+}
