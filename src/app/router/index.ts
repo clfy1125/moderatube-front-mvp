@@ -21,6 +21,7 @@ const routes = [
     children: [
       { path: 'signin', component: SignIn },
       { path: 'login', component: LogIn }, // google OAuth redirect-url => callback 처리 공간
+      { path: 'callback', component: LogIn }, // google OAuth redirect-url => callback 처리 공간
       { path: 'link', component: Link }, // google OAuth redirect-url => link 처리 공간
       { path: 'agreement', name: 'Agreement', component: Agreement }
     ]
