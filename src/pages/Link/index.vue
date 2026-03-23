@@ -18,7 +18,7 @@ const errMsg = ref({ error_code: '', error: '' });
 const closeAlertModal = async () => {
   showAlertModal.value = false;
 
-  await router.replace('/');
+  await router.replace('/app');
 };
 
 /** 기존 사용자 계정에 Youtube 계정 연결 시도 */
@@ -26,7 +26,7 @@ const handleLink = async (code: string) => {
   try {
     await postGoogleOAuthLink({ code });
     if (linkData.value === undefined) return;
-    router.replace('/');
+    router.replace('/app');
   } catch (err) {
     console.error('google OAuth link error: ', err);
 

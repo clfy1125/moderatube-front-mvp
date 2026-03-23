@@ -18,7 +18,7 @@ const changeTab = (selectedTab: string) => (tab.value = selectedTab as EHistoryT
 <template>
   <div class="history-widget">
     <div class="main-content">
-      <GoBackBtn text="마이페이지" link="/profile" />
+      <GoBackBtn text="마이페이지" link="/app/profile" />
 
       <div class="upper-part">
         <TabBtns :list="Object.values(EHistoryTabEnum)" :tab="tab" @on-select-tab="changeTab" />

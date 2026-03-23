@@ -45,7 +45,7 @@ const handlePostOrderClose = async (paymentId: string) => {
 
     paymentCompleted.value = false;
   } finally {
-    router.replace({ path: '/profile', query: {} });
+    router.replace({ path: '/app/profile', query: {} });
   }
 };
 
@@ -63,12 +63,12 @@ const handleMobilePaymentRedirectCallback = async () => {
       error: message ?? '결제를 실패했습니다. 다시 시도해주세요.'
     });
 
-    router.replace({ path: '/profile', query: {} });
+    router.replace({ path: '/app/profile', query: {} });
 
     return;
   }
 
-  if (!paymentId) return router.replace({ path: '/profile', query: {} });
+  if (!paymentId) return router.replace({ path: '/app/profile', query: {} });
 
   handlePostOrderClose(paymentId);
 };

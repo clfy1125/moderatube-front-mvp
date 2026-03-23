@@ -65,7 +65,7 @@ onMounted(handlePostVideoIdCommentsSync);
 <template>
   <div class="comment-management-widget">
     <div class="division-for-mobile" :data-btns-are-visible="btnsAreVisibleOnMobile">
-      <GoBackBtn text="목록으로" link="/channel-management" />
+      <GoBackBtn text="목록으로" link="/app/channel-management" />
 
       <VideoStatsSummaryPanel @on-get-video-info="(reserveDelTime: string) => (autoDeletionAt = reserveDelTime)" />
 

@@ -14,19 +14,19 @@ const route = useRoute();
 const setPageName = () => {
   switch (route.path) {
     default:
-    case '/':
+    case '/app':
       return {
         name: '대시보드',
         value: 'dashboard'
       };
-    case '/channel-management':
-    case '/comment-management':
+    case '/app/channel-management':
+    case '/app/comment-management':
       return {
         name: '채널관리',
         value: 'channel'
       };
-    case '/profile':
-    case '/history':
+    case '/app/profile':
+    case '/app/history':
       return {
         name: '마이페이지',
         value: 'profile'
@@ -55,7 +55,7 @@ onUnmounted(() => window.removeEventListener('resize', handleHideSideBar));
         <span> {{ setPageName().name }}</span>
       </div>
 
-      <SelectChannel :hidden="$route.path === '/profile' || $route.path === '/history'" />
+      <SelectChannel :hidden="$route.path === '/app/profile' || $route.path === '/app/history'" />
 
       <button class="sidebar-btn" @click="() => toggleSideBar(true)"></button>
     </div>

@@ -27,7 +27,7 @@ const onClickLogout = async () => {
 
     removeTokens();
     /* 로그인으로 보내기 */
-    router.replace('/auth/signin');
+    router.replace('/');
   } catch (err) {
     alertStore.changeAlert({ open: true, error: (err as Err).response.data.error, error_code: (err as Err).response.data.error_code });
   }

@@ -62,8 +62,7 @@ watch(selected, () => {
   if (selected.value === 'ADD_CHANNEL') return handleAnotherGoogleLogin();
   channelIdStore.changeChannelId(selected.value);
 
-  // 만약 '/comment-management' 페이지에서 다른 채널을 선택할 경우 '/channel-management'로 이동전에 videosQueryParams 초기화
-  if (route.path.includes('/comment-management')) {
+  if (route.path.includes('/app/comment-management')) {
     queryParamsStore.resetVideosQueryParams();
     router.replace({ name: 'ChannelManagement' });
   }

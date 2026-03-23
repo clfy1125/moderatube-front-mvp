@@ -12,6 +12,6 @@ export const useRedirectIfAuthed = () => {
     if (!localTokens) return;
 
     const { accessToken, refreshToken } = JSON.parse(localTokens);
-    if (accessToken || refreshToken) router.replace({ name: 'Home' });
+    if (accessToken || refreshToken) router.replace('/app');
   });
 };

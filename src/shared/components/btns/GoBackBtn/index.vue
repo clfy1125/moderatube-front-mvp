@@ -3,7 +3,7 @@ import { useRouter } from 'vue-router';
 
 interface IGoBackBtnProps {
   text: string;
-  link: '/channel-management' | '/profile';
+  link: '/app/channel-management' | '/app/profile';
 }
 
 defineProps<IGoBackBtnProps>();

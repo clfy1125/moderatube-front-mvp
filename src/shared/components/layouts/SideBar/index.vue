@@ -26,14 +26,14 @@ const goTo = (isDismissable: boolean, path: string) => {
 };
 
 const onClickDashboardBtn = () => {
-  goTo(route.path === '/', '/');
+  goTo(route.path === '/app', '/app');
 };
 
 const onClickChannelManageBtn = () => {
-  if (route.path.includes('/comment-management')) {
-    router.replace('/channel-management');
+  if (route.path.includes('/app/comment-management')) {
+    router.replace('/app/channel-management');
   } else {
-    goTo(route.path === '/channel-management', '/channel-management');
+    goTo(route.path === '/app/channel-management', '/app/channel-management');
   }
 };
 </script>
@@ -41,16 +41,16 @@ const onClickChannelManageBtn = () => {
 <template>
   <aside class="sidebar">
     <div class="btns-part">
-      <button :class="`btn ${$route.path === '/' && 'active'}`" @click="onClickDashboardBtn">
+      <button :class="`btn ${$route.path === '/app' && 'active'}`" @click="onClickDashboardBtn">
         <div class="icon icon-dashboard"></div>
         대시보드
       </button>
-      <button :class="`btn ${($route.path === '/channel-management' || $route.path.includes('/comment-management')) && 'active'}`" @click="onClickChannelManageBtn">
+      <button :class="`btn ${($route.path === '/app/channel-management' || $route.path.includes('/app/comment-management')) && 'active'}`" @click="onClickChannelManageBtn">
         <div class="icon icon-channel-setting"></div>
         채널 관리
       </button>
     </div>
-    <ProfileBtn :user-name="userInfo?.data.profile.display_name || ''" :user-thumbnail="userInfo?.data.profile.thumbnail || ''" @click="goTo($route.path === '/profile', '/profile')" />
+    <ProfileBtn :user-name="userInfo?.data.profile.display_name || ''" :user-thumbnail="userInfo?.data.profile.thumbnail || ''" @click="goTo($route.path === '/app/profile', '/app/profile')" />
   </aside>
 </template>
 

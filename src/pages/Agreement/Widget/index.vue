@@ -49,7 +49,7 @@ const handlePutProfileUpdate = async () => {
     if (profileUpdateResult.value === undefined) return;
 
     const result = hasAgreed(profileUpdateResult.value.data.agreement);
-    if (result) router.replace('/');
+    if (result) router.replace('/app');
   } catch (err) {
     errMsg.value.error = (err as Err).response.data.error ?? '';
     errMsg.value.error_code = (err as Err).response.data.error_code ?? '';

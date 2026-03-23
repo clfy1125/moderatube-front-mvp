@@ -113,7 +113,7 @@ const handleRequestPayment = async () => {
       // pc: WindowType.POPUP,
       mobile: WindowType.REDIRECTION // 모바일이라면 리다이렉트
     },
-    redirectUrl: `${import.meta.env.MODE === 'development' ? LOCAL_URL : DEPLOY_URL}/profile`
+    redirectUrl: `${import.meta.env.MODE === 'development' ? LOCAL_URL : DEPLOY_URL}/app/profile`
   };
 
   try {

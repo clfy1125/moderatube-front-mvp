@@ -32,7 +32,7 @@ const handleCallback = async (code: string) => {
     setTokens(callbackData.value?.data.access, callbackData.value?.data.refresh);
 
     const result = hasAgreed(callbackData.value.data.user.profile.agreement);
-    if (result) router.replace('/');
+    if (result) router.replace('/app');
     else router.replace('/auth/agreement');
   } catch (err) {
     console.error('google OAuth callback error: ', err);
