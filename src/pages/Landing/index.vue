@@ -175,14 +175,14 @@ onMounted(() => {
 .nav-cta {
   padding: 8px 20px;
   border-radius: 8px;
-  background-color: $key_color;
+  background: linear-gradient(135deg, #4E4DA8 0%, #C7386A 100%);
   color: #fff;
   font-size: 14px;
   font-weight: 600;
-  transition: background-color 0.2s;
+  transition: opacity 0.2s;
 
   &:hover {
-    background-color: $key_color_hover;
+    opacity: 0.9;
   }
 }
 
@@ -190,7 +190,7 @@ onMounted(() => {
 .hero {
   padding: 100px 24px 80px;
   text-align: center;
-  background: linear-gradient(180deg, #fff 0%, #f6f5ff 100%);
+  background: linear-gradient(180deg, #fff 0%, #f5f3ff 50%, #fff5f7 100%);
 
   @include mobile {
     padding: 60px 20px 50px;
@@ -206,7 +206,7 @@ onMounted(() => {
   display: inline-block;
   padding: 6px 16px;
   border-radius: 20px;
-  background-color: rgba(78, 77, 168, 0.1);
+  background: linear-gradient(135deg, rgba(78, 77, 168, 0.1) 0%, rgba(199, 56, 106, 0.1) 100%);
   color: $key_color;
   font-size: 13px;
   font-weight: 600;
@@ -227,7 +227,7 @@ onMounted(() => {
 }
 
 .hero-highlight {
-  background: linear-gradient(135deg, $key_color 0%, #7b61ff 100%);
+  background: linear-gradient(135deg, #4E4DA8 0%, #C7386A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -252,15 +252,17 @@ onMounted(() => {
   display: inline-block;
   padding: 14px 36px;
   border-radius: 12px;
-  background-color: $key_color;
+  background: linear-gradient(135deg, #4E4DA8 0%, #C7386A 100%);
   color: #fff;
   font-size: 16px;
   font-weight: 700;
-  transition: background-color 0.2s, transform 0.15s;
+  transition: opacity 0.2s, transform 0.15s;
+  box-shadow: 0 4px 16px rgba(78, 77, 168, 0.25);
 
   &:hover {
-    background-color: $key_color_hover;
+    opacity: 0.92;
     transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(199, 56, 106, 0.3);
   }
 }
 
@@ -284,7 +286,10 @@ onMounted(() => {
   display: inline-block;
   padding: 6px 16px;
   border-radius: 20px;
-  border: 1px solid $key_color;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #4E4DA8, #C7386A);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
   color: $key_color;
   font-size: 13px;
   font-weight: 600;
@@ -330,11 +335,12 @@ onMounted(() => {
   border: 1px solid #eee;
   background-color: #fafafa;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 24px rgba(78, 77, 168, 0.1);
+    border-color: rgba(78, 77, 168, 0.2);
   }
 
   h3 {
@@ -355,10 +361,20 @@ onMounted(() => {
   height: 48px;
   margin: 0 auto 20px;
   border-radius: 12px;
-  background-color: rgba(78, 77, 168, 0.1);
+  background-color: rgba(78, 77, 168, 0.08);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(78, 77, 168, 0.08) 0%, rgba(199, 56, 106, 0.08) 100%);
+    border-radius: 12px;
+  }
 
   &.icon-ai {
     background-image: url('@/shared/assets/comment-icon.svg');
@@ -436,8 +452,11 @@ onMounted(() => {
 
 .tech-after {
   background-color: #fff;
-  border: 2px solid $key_color;
-  box-shadow: 0 4px 20px rgba(78, 77, 168, 0.1);
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(135deg, #4E4DA8, #C7386A);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  box-shadow: 0 4px 20px rgba(78, 77, 168, 0.12);
 }
 
 .tech-label {
@@ -455,7 +474,7 @@ onMounted(() => {
 }
 
 .label-after {
-  background-color: rgba(78, 77, 168, 0.1);
+  background: linear-gradient(135deg, rgba(78, 77, 168, 0.12) 0%, rgba(199, 56, 106, 0.12) 100%);
   color: $key_color;
 }
 
