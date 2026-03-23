@@ -22,8 +22,8 @@ const { mutateAsync: putProfileUpdate, data: profileUpdateResult } = usePutProfi
 const showAlertModal = ref<boolean>(false);
 const errMsg = ref({ error_code: '', error: '' });
 
-const privacy_policy_link = ref('https://scientific-twill-9a2.notion.site/30440168edee8085ac87f68240043dc9');
-const terms_of_services_link = ref('https://scientific-twill-9a2.notion.site/30440168edee80e98716fdfaa2c7a8d9');
+const privacy_policy_link = ref('/privacy-policy');
+const terms_of_services_link = ref('/terms-of-service');
 
 const state = reactive({ termsOfServices: false, privacyPolicy: false });
 

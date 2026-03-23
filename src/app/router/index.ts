@@ -10,11 +10,23 @@ import Home from '@/pages/Home/index.vue';
 import Link from '@/pages/Link/index.vue';
 import LogIn from '@/pages/LogIn/index.vue';
 import NotFound from '@/pages/NotFound/index.vue';
+import PrivacyPolicy from '@/pages/PrivacyPolicy/index.vue';
 import Profile from '@/pages/Profile/index.vue';
 import SignIn from '@/pages/SignIn/index.vue';
+import TermsOfService from '@/pages/TermsOfService/index.vue';
 import { useVideosQueryParamsStore } from '@/shared/store/useChannelQueryStore';
 
 const routes = [
+  {
+    path: '/privacy-policy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicy
+  },
+  {
+    path: '/terms-of-service',
+    name: 'TermsOfService',
+    component: TermsOfService
+  },
   {
     path: '/auth',
     component: AuthLayout,

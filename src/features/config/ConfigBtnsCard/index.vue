@@ -1,8 +1,8 @@
 <script setup lang="ts">
 defineOptions({ name: 'ConfigBtnsCard' });
 
-const privacy_policy_link = 'https://scientific-twill-9a2.notion.site/30440168edee8085ac87f68240043dc9';
-const terms_of_services_link = 'https://scientific-twill-9a2.notion.site/30440168edee80e98716fdfaa2c7a8d9';
+const privacy_policy_link = '/privacy-policy';
+const terms_of_services_link = '/terms-of-service';
 </script>
 
 <template>
