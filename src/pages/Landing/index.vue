@@ -27,10 +27,7 @@ onMounted(() => {
     <!-- Navbar -->
     <nav class="landing-nav">
       <div class="nav-inner">
-        <div class="nav-logo">
-          <div class="nav-logo-icon"></div>
-          <span class="nav-logo-text">Moderatube</span>
-        </div>
+        <div class="nav-logo"></div>
         <button class="nav-cta" @click="goToApp">시작하기</button>
       </div>
     </nav>
@@ -114,10 +111,7 @@ onMounted(() => {
     <footer class="landing-footer">
       <div class="footer-inner">
         <div class="footer-top">
-          <div class="footer-logo">
-            <div class="nav-logo-icon"></div>
-            <span class="nav-logo-text">Moderatube</span>
-          </div>
+          <div class="footer-logo"></div>
           <p class="footer-copyright">&copy; 2026 Moderatube. All rights reserved.</p>
           <div class="footer-links">
             <a href="/terms-of-service" target="_blank">이용약관</a>
@@ -165,25 +159,17 @@ onMounted(() => {
 }
 
 .nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.nav-logo-icon {
-  width: 28px;
-  height: 32px;
-  background-image: url('@/shared/assets/login-logo-icon.svg');
+  width: 180px;
+  height: 36px;
+  background-image: url('@/shared/assets/moderatube-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-}
+  background-position: left center;
 
-.nav-logo-text {
-  font-size: 20px;
-  font-weight: 700;
-  color: #1c052b;
-  letter-spacing: -0.5px;
+  @include mobile {
+    width: 150px;
+    height: 30px;
+  }
 }
 
 .nav-cta {
@@ -529,6 +515,15 @@ onMounted(() => {
     gap: 16px;
     text-align: center;
   }
+}
+
+.footer-logo {
+  width: 160px;
+  height: 32px;
+  background-image: url('@/shared/assets/moderatube-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
 }
 
 .footer-copyright {

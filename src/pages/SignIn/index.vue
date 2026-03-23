@@ -38,11 +38,12 @@ useRedirectIfAuthed();
   }
 
   .signin-logo {
-    width: 126px;
-    height: 142px;
+    width: 220px;
+    height: 50px;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('@/shared/assets/login-icon.png');
+    background-size: contain;
+    background-image: url('@/shared/assets/moderatube-logo.png');
   }
 
   .signin-footer {

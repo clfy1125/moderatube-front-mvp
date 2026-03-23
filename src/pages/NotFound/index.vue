@@ -27,12 +27,13 @@ defineOptions({ name: 'NotFound' });
     align-items: center;
 
     .logo-icon {
-      width: 120px;
-      height: 200px;
+      width: 200px;
+      height: 50px;
+      margin-bottom: 24px;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
-      background-image: url('@/shared/assets/login-icon.png');
+      background-image: url('@/shared/assets/moderatube-logo.png');
     }
 
     span {

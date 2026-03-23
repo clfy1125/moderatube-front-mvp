@@ -89,17 +89,17 @@ onUnmounted(() => window.removeEventListener('resize', handleHideSideBar));
   .logo {
     flex-shrink: 0;
     width: 170px;
-    height: 62px;
+    height: 40px;
 
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('@/shared/assets/logo-icon.png');
+    background-size: contain;
+    background-image: url('@/shared/assets/moderatube-logo.png');
+    filter: brightness(0) invert(1);
 
     @include tablet {
-      width: 123px;
-      height: 30px;
-
-      background-image: url('@/shared/assets/logo-icon mobile.png');
+      width: 140px;
+      height: 32px;
     }
   }
 

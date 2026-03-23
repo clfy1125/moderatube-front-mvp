@@ -36,7 +36,7 @@ const handleGetAuthMe = async () => {
 
       /* 로그인으로 보내기 & 토큰도 제거 */
       removeTokens();
-      router.replace('/');
+      router.replace('/auth/signin');
 
       return;
     }
@@ -72,7 +72,7 @@ watch(() => channelIdStore.channelId, handlePostChannelSync);
 onMounted(async () => {
   const localTokens = getTokens();
   // AT, RT가 없다면 접근불가. 로그인으로 보내기
-  if (!localTokens) return router.replace('/');
+  if (!localTokens) return router.replace('/auth/signin');
 
   handleGetAuthMe();
 });
