@@ -5,8 +5,8 @@ defineOptions({ name: 'PageFooter' });
 <template>
   <div class="footer">
     <div>
-      <p>주식회사 씨엘에프와이 44919 울산광역시 울주군 언양읍 유니스트길 50, 307동 1층 유니스파크</p>
-      <p>전화번호: 010-8948-0693</p>
+      <p>언양읍 유니스트길 50, 307동 1층 유니스파크, 울주군 44919</p>
+      <p>+827080987102</p>
       <p>팩스번호: 0504-182-8808</p>
     </div>
     <div class="second-part">
